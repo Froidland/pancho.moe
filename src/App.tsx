@@ -6,7 +6,7 @@ import { Main } from "./components/Main";
 const App: Component = () => {
 	const config: HopeThemeConfig = {
 		initialColorMode: "dark",
-	}
+	};
 
 	return (
 		<HopeProvider config={config}>
