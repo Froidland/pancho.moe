@@ -1,0 +1,46 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Home" route="/">
+	<main class="main">
+		<div class="profile">
+			<div>
+				<h1>Hey there ;)</h1>
+			</div>
+			<div class="socials"></div>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	.main {
+		position: relative;
+		min-height: calc(100svh - var(--header-height) - var(--footer-height));
+		max-width: calc(var(--main-width) + var(--gap) * 2);
+		margin: auto;
+		padding: var(--gap);
+	}
+
+	.profile {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: calc(
+			100svh - var(--header-height) - var(--footer-height) - (var(--gap) * 2)
+		);
+		text-align: center;
+	}
+
+	.socials {
+		display: flex;
+		column-gap: 12px;
+		padding: 12px 0px;
+	}
+
+	h1 {
+		font-size: 36px;
+		font-weight: 700;
+		padding: 12px 0px;
+	}
+</style>
