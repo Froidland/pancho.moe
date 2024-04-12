@@ -1,4 +1,11 @@
 ---
+import BlueSkyIcon from "../components/icons/BlueSkyIcon.astro";
+import EmailIcon from "../components/icons/EmailIcon.astro";
+import FileSaveRoundedIcon from "../components/icons/FileSaveRoundedIcon.astro";
+import GithubIcon from "../components/icons/GithubIcon.astro";
+import LinkedInIcon from "../components/icons/LinkedInIcon.astro";
+import ProtonMailIcon from "../components/icons/ProtonMailIcon.astro";
+import TwitterIcon from "../components/icons/TwitterIcon.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -8,7 +15,48 @@ import Layout from "../layouts/Layout.astro";
 			<div>
 				<h1>Hey there :D</h1>
 			</div>
-			<div class="socials"></div>
+			<ul class="socials">
+				<li>
+					<a href="mailto:phauva@gmail.com" title="Email">
+						<EmailIcon size="2.5rem" />
+					</a>
+				</li>
+				<li>
+					<a href="mailto:phauva@proton.me" title="Protonmail">
+						<ProtonMailIcon size="2.5rem" />
+					</a>
+				</li>
+				<li>
+					<a href="https://github.com/Froidland" title="Github">
+						<GithubIcon size="2.5rem" />
+					</a>
+				</li>
+				<li>
+					<a
+						href="https://www.linkedin.com/in/francisco-hauva/"
+						title="Linkedin"
+					>
+						<LinkedInIcon size="2.5rem" />
+					</a>
+				</li>
+				<li>
+					<a href="https://twitter.com/NotPanchowo" title="Twitter">
+						<TwitterIcon size="2.5rem" />
+					</a>
+				</li>
+				<li>
+					<a href="https://bsky.app/profile/pancho.moe" title="Bluesky">
+						<BlueSkyIcon size="2.5rem" />
+					</a>
+				</li>
+			</ul>
+			<a
+				href="https://drive.google.com/file/d/1f8qw8D3Hhylv88BkxtHm5vRUL5jW0jOr/view?usp=sharing"
+				title="Resume"
+				class="button transition"
+			>
+				<FileSaveRoundedIcon size="2rem" /> Resume
+			</a>
 		</div>
 	</main>
 </Layout>
@@ -24,6 +72,7 @@ import Layout from "../layouts/Layout.astro";
 
 	.profile {
 		display: flex;
+		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 		height: calc(
@@ -41,6 +90,5 @@ import Layout from "../layouts/Layout.astro";
 	h1 {
 		font-size: 36px;
 		font-weight: 700;
-		padding: 12px 0px;
 	}
 </style>
