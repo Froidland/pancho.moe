@@ -1,6 +1,6 @@
 ---
 import BlueSkyIcon from "../components/icons/BlueSkyIcon.astro";
-import EmailIcon from "../components/icons/EmailIcon.astro";
+import GmailIcon from "../components/icons/GmailIcon.astro";
 import FileSaveRoundedIcon from "../components/icons/FileSaveRoundedIcon.astro";
 import GithubIcon from "../components/icons/GithubIcon.astro";
 import LinkedInIcon from "../components/icons/LinkedInIcon.astro";
@@ -17,17 +17,25 @@ import Layout from "../layouts/Layout.astro";
 			</div>
 			<ul class="socials">
 				<li>
-					<a href="mailto:phauva@gmail.com" title="Email">
-						<EmailIcon size="2.5rem" />
+					<a href="mailto:phauva@gmail.com" title="Gmail" aria-label="Gmail">
+						<GmailIcon size="2.5rem" />
 					</a>
 				</li>
 				<li>
-					<a href="mailto:phauva@proton.me" title="Protonmail">
+					<a
+						href="mailto:phauva@proton.me"
+						title="Protonmail"
+						aria-label="Protonmail"
+					>
 						<ProtonMailIcon size="2.5rem" />
 					</a>
 				</li>
 				<li>
-					<a href="https://github.com/Froidland" title="Github">
+					<a
+						href="https://github.com/Froidland"
+						title="Github"
+						aria-label="Github"
+					>
 						<GithubIcon size="2.5rem" />
 					</a>
 				</li>
@@ -35,17 +43,26 @@ import Layout from "../layouts/Layout.astro";
 					<a
 						href="https://www.linkedin.com/in/francisco-hauva/"
 						title="Linkedin"
+						aria-label="Linkedin"
 					>
 						<LinkedInIcon size="2.5rem" />
 					</a>
 				</li>
 				<li>
-					<a href="https://twitter.com/NotPanchowo" title="Twitter">
+					<a
+						href="https://twitter.com/NotPanchowo"
+						title="Twitter"
+						aria-label="Twitter"
+					>
 						<TwitterIcon size="2.5rem" />
 					</a>
 				</li>
 				<li>
-					<a href="https://bsky.app/profile/pancho.moe" title="Bluesky">
+					<a
+						href="https://bsky.app/profile/pancho.moe"
+						title="Bluesky"
+						aria-label="Bluesky"
+					>
 						<BlueSkyIcon size="2.5rem" />
 					</a>
 				</li>
