@@ -1,17 +1,15 @@
----
-import Layout from "../layouts/Layout.astro";
----
+<svelte:head>
+	<title>Francisco Hauva | Projects</title>
+</svelte:head>
 
-<Layout title="Projects" route="/projects">
-	<main class="main">
-		<div class="profile">
-			<div>
-				<h1>Work in progress</h1>
-			</div>
-			<div>Projects will soon be listed here...</div>
+<main class="main">
+	<div class="profile">
+		<div>
+			<h1>Work in progress</h1>
 		</div>
-	</main>
-</Layout>
+		<div>Projects will soon be listed here...</div>
+	</div>
+</main>
 
 <style>
 	.main {
@@ -27,9 +25,7 @@ import Layout from "../layouts/Layout.astro";
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		height: calc(
-			100dvh - var(--header-height) - var(--footer-height) - (var(--gap) * 2)
-		);
+		height: calc(100dvh - var(--header-height) - var(--footer-height) - (var(--gap) * 2));
 		text-align: center;
 	}
 

@@ -1,12 +1,14 @@
 {
 	"useTabs": true,
+	"singleQuote": true,
 	"semi": true,
-	"plugins": ["prettier-plugin-astro"],
+	"printWidth": 100,
+	"plugins": ["prettier-plugin-svelte", "prettier-plugin-tailwindcss"],
 	"overrides": [
 		{
-			"files": "*.astro",
+			"files": "*.svelte",
 			"options": {
-				"parser": "astro"
+				"parser": "svelte"
 			}
 		}
 	]

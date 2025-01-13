@@ -1,18 +1,14 @@
----
-interface Props {
-	route?: string;
-}
+<script lang="ts">
+	import { page } from '$app/state';
 
-const { route } = Astro.props;
+	function getActiveClass(routeCondition: string) {
+		if (routeCondition === page.route.id) {
+			return 'active';
+		}
 
-function getActiveClass(routeCondition: string) {
-	if (routeCondition === route) {
-		return "active";
+		return '';
 	}
-
-	return "";
-}
----
+</script>
 
 <header>
 	<nav class="nav">
@@ -24,12 +20,12 @@ function getActiveClass(routeCondition: string) {
 		<ul class="links">
 			<li>
 				<a href="/">
-					<span class={getActiveClass("/")}>Home</span>
+					<span class={getActiveClass('/')}>Home</span>
 				</a>
 			</li>
 			<li>
 				<a href="/projects">
-					<span class={getActiveClass("/projects")}>Projects</span>
+					<span class={getActiveClass('/projects')}>Projects</span>
 				</a>
 			</li>
 		</ul>
