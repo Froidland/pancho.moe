@@ -12,27 +12,17 @@
 </script>
 
 {#if href}
-	<a {href} {title} aria-label={ariaLabel} class="button transition-all">
+	<a {href} {title} aria-label={ariaLabel} class="button">
 		{@render children()}
 	</a>
 {:else}
-	<button {title} aria-label={ariaLabel} class="button transition-all">
+	<button {title} aria-label={ariaLabel} class="button">
 		{@render children()}
 	</button>
 {/if}
 
 <style>
 	.button {
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		background-color: var(--hljs-bg);
-		color: var(--primary);
-		padding: 6px 14px;
-		font-weight: 500;
-		border-radius: var(--radius);
-	}
-	.button:hover {
-		background-color: var(--hljs-bg-hover);
+		@apply inline-flex items-center justify-center rounded bg-[#2e2e33] px-[14px] py-[6px] font-medium text-[#dbdbdc] transition-all hover:bg-[#3d3d43];
 	}
 </style>

@@ -13,12 +13,13 @@
 	<title>Francisco Hauva | Home</title>
 </svelte:head>
 
-<main class="main">
+<main>
 	<div class="profile">
 		<div>
 			<h1 class="text-4xl font-bold">Hey there :D</h1>
 		</div>
-		<ul class="socials">
+		<!-- TODO: Make the icon buttons a separate generic component -->
+		<ul class="flex gap-x-[12px] py-3">
 			<li>
 				<a href="mailto:phauva@gmail.com" title="Gmail" aria-label="Gmail">
 					<GmailHoverableIcon size="2.5rem" />
@@ -54,14 +55,18 @@
 				</a>
 			</li>
 		</ul>
-		<Button href="https://url.pancho.moe/public_resume" title="Resume" aria-label="Resume">
-			<FileSaveRoundedIcon size="2rem" /> Resume
+		<Button
+			href="https://url.pancho.moe/public_resume"
+			title="Download resume/cv"
+			aria-label="Download resume/cv"
+		>
+			<FileSaveRoundedIcon size="2rem" /> Resume / CV
 		</Button>
 	</div>
 </main>
 
 <style>
-	.main {
+	main {
 		position: relative;
 		min-height: calc(100dvh - var(--header-height) - var(--footer-height));
 		max-width: calc(var(--main-width) + var(--gap) * 2);
@@ -76,11 +81,5 @@
 		justify-content: center;
 		height: calc(100dvh - var(--header-height) - var(--footer-height) - (var(--gap) * 2));
 		text-align: center;
-	}
-
-	.socials {
-		display: flex;
-		column-gap: 12px;
-		padding: 12px 0px;
 	}
 </style>

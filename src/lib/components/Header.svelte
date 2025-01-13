@@ -1,64 +1,21 @@
 <script lang="ts">
-	import { page } from '$app/state';
-
-	function getActiveClass(routeCondition: string) {
-		if (routeCondition === page.route.id) {
-			return 'active';
-		}
-
-		return '';
-	}
+	import NavLink from './NavLink.svelte';
 </script>
 
 <header>
-	<nav class="nav">
-		<div class="title">
+	<nav class="mx-auto flex h-[60px] max-w-[1072px] justify-between px-[24px] leading-[60px]">
+		<div>
 			<a href="/">
-				<span class="title">Francisco Hauva</span>
+				<span class="text-2xl font-bold leading-[60px]">Francisco Hauva</span>
 			</a>
 		</div>
-		<ul class="links">
+		<ul class="flex gap-x-[24px] text-[16px]">
 			<li>
-				<a href="/">
-					<span class={getActiveClass('/')}>Home</span>
-				</a>
+				<NavLink href="/" title="Home" aria-label="Home">Home</NavLink>
 			</li>
 			<li>
-				<a href="/projects">
-					<span class={getActiveClass('/projects')}>Projects</span>
-				</a>
+				<NavLink href="/projects" title="Projects" aria-label="Projects">Projects</NavLink>
 			</li>
 		</ul>
 	</nav>
 </header>
-
-<style>
-	.nav {
-		display: flex;
-		justify-content: space-between;
-		max-width: calc(var(--nav-width) + var(--gap) * 2);
-		line-height: calc(var(--header-height));
-		height: var(--header-height);
-		margin: auto;
-		padding: 0px var(--gap);
-	}
-
-	.links {
-		display: flex;
-		column-gap: var(--gap);
-	}
-
-	.links li a {
-		font-size: 16px;
-	}
-
-	.active {
-		font-weight: 500;
-		border-bottom: 2px solid;
-	}
-
-	.title {
-		font-weight: 700;
-		font-size: 24px;
-	}
-</style>

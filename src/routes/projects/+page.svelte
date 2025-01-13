@@ -4,8 +4,8 @@
 
 <main class="main">
 	<div class="profile">
-		<div>
-			<h1>Work in progress</h1>
+		<div class="py-3">
+			<h1 class="text-4xl font-bold">Work in progress</h1>
 		</div>
 		<div>Projects will soon be listed here...</div>
 	</div>
@@ -27,11 +27,5 @@
 		justify-content: center;
 		height: calc(100dvh - var(--header-height) - var(--footer-height) - (var(--gap) * 2));
 		text-align: center;
-	}
-
-	h1 {
-		font-size: 36px;
-		font-weight: 700;
-		padding: 12px 0px;
 	}
 </style>
