@@ -1,0 +1,46 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.dark {
+	--theme: hsl(220, 5%, 12%);
+	--entry: hsl(240, 5%, 19%);
+	--primary: #dbdbdc;
+	--secondary: #9b9c9d;
+	--secondary-hover: hsl(210, 1%, 71%);
+	--tertiary: hsl(220, 2%, 26%);
+	--content: hsl(240, 1%, 77%);
+	--hljs-bg: hsl(240, 5%, 19%);
+	--hljs-bg-hover: hsl(240, 5%, 25%);
+	--code-bg: hsl(231, 6%, 23%);
+	--border: hsl(0, 0%, 20%);
+}
+
+:root {
+	--gap: 24px;
+	--content-gap: 20px;
+	--nav-width: 1024px;
+	--main-width: 720px;
+	--header-height: 60px;
+	--footer-height: 60px;
+	--radius: 5px;
+
+	.icon-button {
+		background-color: var(--hljs-bg);
+		border-radius: var(--radius);
+		padding: 5px;
+	}
+	.icon-button:hover {
+		background-color: var(--hljs-bg-hover);
+	}
+}
+
+body {
+	background: var(--theme);
+	font-family: '-apple-system', 'BlinkMacSystemFont', 'segoe ui', 'Roboto', 'Oxygen', 'Ubuntu',
+		'Cantarell', 'open sans', 'helvetica neue', 'sans-serif';
+	font-size: 18px;
+	line-height: 1.6;
+	word-break: break-word;
+	color: var(--primary);
+}
