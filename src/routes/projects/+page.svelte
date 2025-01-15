@@ -8,6 +8,12 @@
 			<h1 class="text-4xl font-bold">Work in progress</h1>
 		</div>
 		<div>Projects will soon be listed here...</div>
+		<div>
+			In the meantime, you can check my <a
+				class="underline hover:text-secondary"
+				href="https://github.com/Froidland">GitHub</a
+			> :D
+		</div>
 	</div>
 </main>
 
