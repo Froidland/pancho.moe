@@ -25,7 +25,7 @@
 	{#if href.startsWith('/')}
 		<span
 			class={clsx(
-				isCurrentRoute(href) && 'border-b-2 border-solid font-medium',
+				isCurrentRoute(href) && 'font-medium underline decoration-2 underline-offset-4',
 				'hover:text-secondary',
 			)}>{@render children()}</span
 		>
