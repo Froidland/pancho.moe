@@ -1,6 +1,14 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import 'tailwindcss';
+
+body {
+	background: var(--theme);
+	font-family: '-apple-system', 'BlinkMacSystemFont', 'segoe ui', 'Roboto', 'Oxygen', 'Ubuntu',
+		'Cantarell', 'open sans', 'helvetica neue', 'sans-serif';
+	font-size: 18px;
+	line-height: 1.6;
+	word-break: break-word;
+	color: var(--primary);
+}
 
 .dark {
 	--theme: hsl(220, 5%, 12%);
@@ -35,12 +43,4 @@
 	}
 }
 
-body {
-	background: var(--theme);
-	font-family: '-apple-system', 'BlinkMacSystemFont', 'segoe ui', 'Roboto', 'Oxygen', 'Ubuntu',
-		'Cantarell', 'open sans', 'helvetica neue', 'sans-serif';
-	font-size: 18px;
-	line-height: 1.6;
-	word-break: break-word;
-	color: var(--primary);
-}
+
