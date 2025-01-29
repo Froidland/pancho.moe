@@ -26,12 +26,17 @@ body {
 }
 
 :root {
+	--footer-height: 60px;
+	/* Footer text overflows into a new line, causing it to increase in height by 24px, useful for mobile screens */
+	@media screen and (max-width: 615px) {
+		--footer-height: 84px;
+	}
+
 	--gap: 24px;
 	--content-gap: 20px;
 	--nav-width: 1024px;
 	--main-width: 720px;
 	--header-height: 60px;
-	--footer-height: 60px;
 	--radius: 5px;
 
 	.icon-button {
