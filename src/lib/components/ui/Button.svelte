@@ -22,6 +22,8 @@
 {/if}
 
 <style>
+	@reference "tailwindcss";
+
 	.button {
 		@apply inline-flex items-center justify-center rounded bg-[#2e2e33] px-[14px] py-[6px] font-medium text-[#dbdbdc] transition-all hover:bg-[#3d3d43];
 	}
