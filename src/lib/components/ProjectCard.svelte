@@ -36,6 +36,6 @@
 				{/each}
 			</ul>
 		</div>
-		<p class="text-secondary text-justify text-[16px]">{project.description}</p>
+		<p class="text-secondary text-[16px]">{project.description}</p>
 	</div>
 </article>
