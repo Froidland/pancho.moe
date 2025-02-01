@@ -1,17 +1,17 @@
 <script lang="ts">
 	type Props = {
-		size: string;
-		class: string;
+		size?: string;
+		class?: string;
 	};
 
-	let { size, class: className }: Props = $props();
+	let { size = '1em', class: className = '' }: Props = $props();
 </script>
 
 <svg
 	xmlns="http://www.w3.org/2000/svg"
 	width={size}
 	height={size}
-	viewBox="0 0 24 24"
+	viewBox="2 2 20 20"
 	class={className}
 	><path
 		fill="currentColor"
