@@ -6,7 +6,7 @@
 	<nav class="mx-auto flex h-[60px] max-w-[1072px] justify-between px-[24px] leading-[60px]">
 		<div>
 			<a href="/">
-				<span class="text-2xl font-bold leading-[60px]">Francisco Hauva</span>
+				<span class="text-2xl leading-[60px] font-bold">Francisco Hauva</span>
 			</a>
 		</div>
 		<ul class="flex gap-x-[24px] text-[16px]">
