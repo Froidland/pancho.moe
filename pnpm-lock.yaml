@@ -15,8 +15,8 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0
       arctic:
-        specifier: ^3.2.1
-        version: 3.2.1
+        specifier: ^3.2.4
+        version: 3.2.4
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
@@ -972,8 +972,8 @@ packages:
     resolution: {integrity: sha512-zbB9rCJAT1rbjiVDb2hqKFHNYLxgtk8NURxZ3IZwD3F6NtxbXZQCnnSi1Lkx+IDohdPlFp222wVALIheZJQSEg==}
     engines: {node: '>=8'}
 
-  arctic@3.2.1:
-    resolution: {integrity: sha512-lvOfv088aiaNCN4bGpnVd0cJmQKUkB2gGaZeA3lTwbBZVj69+zd/LpBPO6CXNCyX45CKqqcaOV6J7HeJ1k4hEA==}
+  arctic@3.2.4:
+    resolution: {integrity: sha512-EGQAIZtl3Z/2GVGxp0pUnPbD15V4HrbknY+O6zSnLeTBT/cshL4mkNd/X+qFd1zFpW2lVO34w6CTx+3gjwb3lQ==}
 
   argparse@2.0.1:
     resolution: {integrity: sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==}
@@ -2574,7 +2574,7 @@ snapshots:
     dependencies:
       color-convert: 2.0.1
 
-  arctic@3.2.1:
+  arctic@3.2.4:
     dependencies:
       '@oslojs/crypto': 1.0.1
       '@oslojs/encoding': 1.1.0
