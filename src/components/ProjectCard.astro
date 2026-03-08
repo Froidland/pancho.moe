@@ -1,0 +1,59 @@
+---
+import DynamicIcon from "@/components/DynamicIcon.astro";
+import GitHubIcon from "@/components/icons/GitHubIcon.astro";
+
+interface Props {
+	project: {
+		id: number;
+		title: string;
+		description: string;
+		technologies: string[];
+		url: string | null;
+		repositoryUrl: string | null;
+	};
+}
+
+const { project } = Astro.props;
+---
+
+<article
+	class="flex w-full gap-3 rounded-xl border border-solid border-zinc-700 bg-zinc-800 px-6 py-4 shadow transition-all"
+>
+	<div class="flex flex-col gap-1">
+		<div class="flex items-center gap-2">
+			{
+				project.url ? (
+					<a
+						class="font-bold transition-all hover:text-blue-300"
+						href={project.url}
+						target="_blank"
+					>
+						{project.title}
+					</a>
+				) : (
+					<h2 class="font-bold">{project.title}</h2>
+				)
+			}
+			{
+				project.repositoryUrl && (
+					<>
+						<a href={project.repositoryUrl} title="View on GitHub" target="_blank">
+							<GitHubIcon class="transition-all hover:text-white" size="18px" />
+						</a>
+						<div class="h-[75%] border-r border-solid border-secondary/50"></div>
+					</>
+				)
+			}
+			<ul class="flex gap-1">
+				{
+					project.technologies.map((tech) => (
+						<li>
+							<DynamicIcon name={tech} size="18px" />
+						</li>
+					))
+				}
+			</ul>
+		</div>
+		<p class="text-secondary text-[16px]">{project.description}</p>
+	</div>
+</article>

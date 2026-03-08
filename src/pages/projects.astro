@@ -1,0 +1,37 @@
+---
+import ProjectCard from "@/components/ProjectCard.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+const projects = [
+	{
+		id: 1,
+		title: "osu! Tournament Manager",
+		description:
+			"University capstone project where I developed a tournament administration/automation Discord bot for the video game osu! by leveraging a TypeScript framework called Sapphire based on discord.js and using BullMQ and Redis for queues and background tasks.",
+		technologies: ["TypeScript", "Node.js", "MySQL"],
+		url: null,
+		repositoryUrl: "https://url.pancho.moe/otm-bot",
+	},
+	{
+		id: 2,
+		title: "URL Shortener",
+		description:
+			"Simple and straightforward URL shortening service with location tracking for my own personal use, providing authentication for URL management through OAuth2 and Redis for caching of URLs based on their slug for increased throughput.",
+		technologies: ["TypeScript", "Node.js", "Svelte", "PostgreSQL"],
+		url: "https://url.pancho.moe",
+		repositoryUrl: "https://url.pancho.moe/github",
+	},
+];
+---
+
+<BaseLayout title="Francisco Hauva | Projects">
+	<main class="m-auto flex max-w-225 flex-col gap-4 px-6 pt-4">
+		{projects.map((project) => <ProjectCard {project} />)}
+	</main>
+</BaseLayout>
+
+<style>
+	main {
+		min-height: calc(100dvh - var(--header-height) - var(--footer-height));
+	}
+</style>
