@@ -1,0 +1,18 @@
+---
+interface Props {
+	name: string;
+	size?: string;
+	class?: string;
+}
+
+const { name, size = "1em", class: className = "" } = Astro.props;
+---
+
+<img
+	src={`/svg/${name.toLowerCase()}.svg`}
+	alt={`${name} icon`}
+	title={name}
+	width={size}
+	height={size}
+	class={className}
+/>

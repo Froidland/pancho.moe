@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@theme {
+	--color-primary: #dbdbdc;
+	--color-secondary: #9b9c9d;
+	--color-secondary-hover: hsl(210, 1%, 71%);
+	--color-tertiary: hsl(220, 2%, 26%);
+	--color-content: hsl(240, 1%, 77%);
+	--color-theme: hsl(220, 5%, 12%);
+	--color-entry: hsl(240, 5%, 19%);
+	--color-hljs-bg: hsl(240, 5%, 19%);
+	--color-hljs-bg-hover: hsl(240, 5%, 25%);
+	--color-code-bg: hsl(231, 6%, 23%);
+	--color-border: hsl(0, 0%, 20%);
+
+	--radius-default: 5px;
+}
+
+body {
+	background: var(--theme);
+	font-family:
+		"-apple-system", "BlinkMacSystemFont", "segoe ui", "Roboto", "Oxygen",
+		"Ubuntu", "Cantarell", "open sans", "helvetica neue", "sans-serif";
+	font-size: 18px;
+	line-height: 1.6;
+	word-break: break-word;
+	color: var(--primary);
+}
+
+.dark {
+	--theme: hsl(220, 5%, 12%);
+	--entry: hsl(240, 5%, 19%);
+	--primary: #dbdbdc;
+	--secondary: #9b9c9d;
+	--secondary-hover: hsl(210, 1%, 71%);
+	--tertiary: hsl(220, 2%, 26%);
+	--content: hsl(240, 1%, 77%);
+	--hljs-bg: hsl(240, 5%, 19%);
+	--hljs-bg-hover: hsl(240, 5%, 25%);
+	--code-bg: hsl(231, 6%, 23%);
+	--border: hsl(0, 0%, 20%);
+
+	--color-primary: var(--primary);
+	--color-secondary: var(--secondary);
+	--color-secondary-hover: var(--secondary-hover);
+	--color-tertiary: var(--tertiary);
+	--color-content: var(--content);
+	--color-theme: var(--theme);
+	--color-entry: var(--entry);
+	--color-hljs-bg: var(--hljs-bg);
+	--color-hljs-bg-hover: var(--hljs-bg-hover);
+	--color-code-bg: var(--code-bg);
+	--color-border: var(--border);
+}
+
+:root {
+	--footer-height: 60px;
+	/* Footer text overflows into a new line, causing it to increase in height by 24px, useful for mobile screens */
+	@media screen and (max-width: 615px) {
+		--footer-height: 84px;
+	}
+
+	--gap: 24px;
+	--content-gap: 20px;
+	--nav-width: 1024px;
+	--main-width: 720px;
+	--header-height: 60px;
+	--radius: 5px;
+
+	.icon-button {
+		background-color: var(--hljs-bg);
+		border-radius: var(--radius);
+		padding: 5px;
+		transition:
+			color 0.15s ease,
+			background-color 0.15s ease;
+	}
+	.icon-button:hover {
+		background-color: var(--hljs-bg-hover);
+		color: var(--icon-hover-color);
+	}
+}

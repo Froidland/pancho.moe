@@ -1,0 +1,30 @@
+---
+interface Props {
+	href: string;
+	title?: string;
+	"aria-label"?: string;
+}
+
+const { href, title, "aria-label": ariaLabel } = Astro.props;
+const pathname = Astro.url.pathname;
+const isActive = href.startsWith("/") && pathname === href;
+---
+
+<a {href} {title} aria-label={ariaLabel}>
+	{
+		href.startsWith("/") ? (
+			<span
+				class:list={[
+					isActive && "font-medium underline decoration-2 underline-offset-4",
+					"hover:text-secondary",
+				]}
+			>
+				<slot />
+			</span>
+		) : (
+			<span class="hover:text-secondary">
+				<slot />
+			</span>
+		)
+	}
+</a>
