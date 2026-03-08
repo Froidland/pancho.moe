@@ -17,5 +17,9 @@
 			"pattern": "pancho.moe",
 			"custom_domain": true,
 		},
+		{
+			"pattern": "www.pancho.moe",
+			"custom_domain": true,
+		},
 	],
 }
