@@ -6,7 +6,7 @@ interface Props {
 }
 
 const { href, title, "aria-label": ariaLabel } = Astro.props;
-const pathname = Astro.url.pathname;
+const pathname = Astro.url.pathname.replace(/\/$/, "") || "/";
 const isActive = href.startsWith("/") && pathname === href;
 ---
 
@@ -15,7 +15,8 @@ const isActive = href.startsWith("/") && pathname === href;
 		href.startsWith("/") ? (
 			<span
 				class:list={[
-					isActive && "font-medium underline decoration-2 underline-offset-4",
+					isActive &&
+						"font-medium underline decoration-2 underline-offset-4",
 					"hover:text-secondary",
 				]}
 			>
