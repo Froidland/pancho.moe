@@ -3,14 +3,18 @@ import FooterLink from "@/components/FooterLink.astro";
 ---
 
 <footer
-	class="m-auto max-w-3xl px-6 py-4.5 text-center text-[12px] leading-6 text-secondary"
+	class="text-secondary m-auto max-w-3xl px-6 py-4.5 text-center text-[12px] leading-6"
 >
 	<p>
 		&copy; 2025
-		<FooterLink href="/" title="Home" aria-label="Home">Francisco Hauva</FooterLink>
+		<FooterLink href="/" title="Home" aria-label="Home"
+			>Francisco Hauva</FooterLink
+		>
 		| Powered by
-		<FooterLink href="https://astro.build/" title="Astro website" aria-label="Astro website"
-			>Astro</FooterLink
+		<FooterLink
+			href="https://astro.build/"
+			title="Astro website"
+			aria-label="Astro website">Astro</FooterLink
 		>
 		and heavily inspired by
 		<FooterLink
