@@ -1,0 +1,21 @@
+{
+	"$schema": "./node_modules/wrangler/config-schema.json",
+	"main": "dist/_worker.js/index.js",
+	"name": "pancho-moe",
+	"compatibility_date": "2026-03-08",
+	"compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+	"assets": {
+		"binding": "ASSETS",
+		"directory": "./dist",
+	},
+	"observability": {
+		"enabled": true,
+	},
+	"workers_dev": false,
+	"routes": [
+		{
+			"pattern": "pancho.moe",
+			"custom_domain": true,
+		},
+	],
+}
